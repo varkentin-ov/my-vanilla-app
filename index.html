@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="src/styles.css" />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <title>Weather App</title>
+    <meta charset="UTF-8" />
+  </head>
+
+  <body>
+    <div class="conteiner">
+      <div class="weather-app">
+        <form class="weather-search-form" id="weather-search">
+          <div class="row">
+            <div class="col-9">
+              <input
+                type="search"
+                id="search-input"
+                placeholder="Type a city.."
+                autofocus="on"
+                autocomplete="off"
+                class="form-control shadow-sm"
+              />
+            </div>
+            <div class="col-3">
+              <input
+                type="submit"
+                value="Search"
+                class="form-control btn btn-primary shadow-sm"
+              />
+            </div>
+          </div>
+        </form>
+        <h1><span id="city">Sydney</span></h1>
+        <ul>
+          <li id="date-form">Wednesday 22:00</li>
+          <li>
+            <span id="description"> Partly Cloudy </span>
+          </li>
+        </ul>
+        <div class="row">
+          <div class="col-6">
+            <div class="clearfix">
+              <img
+                class="weaher-icon float-left"
+                src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png"
+                alt="Cloudy icon"
+              />
+              <div class float-left>
+                <span class="temperature" id="temperature">19</span
+                ><span class="units">°C | <a href="#">°F</a></span>
+              </div>
+            </div>
+          </div>
+          <div class="col-6">
+            <ul>
+              <li>Humidity: <span id="humidity">77</span> %</li>
+              <li>Wind: <span id="wind">8</span> km/h</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="src/index.js"></script>
+  </body>
+</html>
