@@ -48,6 +48,10 @@ li {
   margin-right: 10px;
 }
 
+.weather-temperature img {
+  margin-right: 10px;
+}
+
 .units {
   position: relative;
   top: -34px;
