@@ -24,20 +24,16 @@ li {
   list-style: none;
 }
 
-
-.container {
-    width: 100%;
-    padding-right: 15px;
-    padding-left: 15px;
-    margin-right: auto;
-    margin-left: auto;
+.weather-app-wrap {
+  max-width: 600px;
+  margin: 20px auto;
+}
 
 .weather-app {
   border: 1px solid #dadde1;
   padding: 15px;
-  margin: 20px auto;
+
   border-radius: 10px;
-  max-width: 600px;
 }
 
 .temperature {
