@@ -20,9 +20,10 @@ function formatDate(timestamp) {
   let day = days[now.getDay()];
   return `${day} ${hours}:${minutes}`;
 }
-let dateElement = document.querySelector("#date-form");
 
-dateElement.innerHTML = formatDate(response.data.dt * 1000);
+document.querySelector("#date-form").innerHTML = formatDate(
+  response.data.dt * 1000
+);
 
 function showWeather(response) {
   document.querySelector("#city").innerHTML = response.data.name;
