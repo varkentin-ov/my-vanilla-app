@@ -20,7 +20,7 @@ function formatDate(timestamp) {
   let day = days[now.getDay()];
   return `${day} ${hours}:${minutes}`;
 }
-//let date = document.querySelector("#date-form");
+let date = document.querySelector("#date-form");
 
 date.innerHTML = formatDate(response.data.dt * 1000);
 
