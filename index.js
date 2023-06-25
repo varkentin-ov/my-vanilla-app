@@ -36,12 +36,12 @@ function showWeather(response) {
   document.querySelector("#description").innerHTML =
     response.data.weather[0].description;
   document
-    .querySelector("#icon-w")
+    .querySelector("#icon")
     .setAttribute(
       "src",
       `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
     );
-}
+ 
 
 function searchCity(event) {
   event.preventDefault();
