@@ -47,6 +47,15 @@ li:first-letter {
   font-weight: 400;
   line-height: 1;
 }
+
+.temperature .active {
+  color: rgb(33, 33, 33);
+  cursor: default;
+}
+
+.temperature .active:hover {
+  text-decoration: none;
+}
 .weather-icon {
   height: 64px;
   width: 64px;
