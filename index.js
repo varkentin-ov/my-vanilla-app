@@ -22,7 +22,36 @@ if (minutes < 10) {
 }
 let newdate = `${day} ${hours}:${minutes}`;
 date.innerHTML = newdate;
+
 let celsiusTemperature = null;
+
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+  let forecastHTML = `<div class="row">`;
+  let daysarray = ["Thu", "Fri", "Sat"];
+  daysarray.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `
+           
+              <div class="col-2">
+                <div class="weather-forecast-date">${day}</div>
+                <img
+                  src="https://openweathermap.org/img/wn/10d@2x.png"
+                  alt=""
+                  width="56"
+                />
+                <div class="weather-forecast-temperatures">
+                  <span class="weather-forecast-temperature-max">18° </span>
+                  <span class="weather-forecast-temperature-min">12° </span>
+                </div>
+              
+            </div>
+        `;
+  });
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
 
 function showWeather(response) {
   let temperatureElement = document.querySelector("#temperature");
@@ -84,8 +113,7 @@ fahrenheit.addEventListener("click", displayFahrenheitTemperature);
 
 let celsius = document.querySelector("#celsius");
 celsius.addEventListener("click", displayCelsiusTemperature);
-
-//let celsiusTemperature = null;
+displayForecast();
 
 function getPosition(position) {
   let lat = position.coords.latitude;
@@ -94,4 +122,5 @@ function getPosition(position) {
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&units=metric&appid=${apiKey}`;
   axios.get(apiUrl).then(showWeather);
 }
+
 navigator.geolocation.getCurrentPosition(getPosition);
